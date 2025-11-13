@@ -25,19 +25,18 @@ const router = createBrowserRouter([
 
 
 
-
-const router = createBrowserRouter(
+/about/hitesh
+Const router = createBrowserRouter(
   createRouterFormElements(
     <Route path='/' element{<Layout />}>
-    <Route path='' element{<Home />}>
-      <Route path='about' element{<About />}>
-        <Route path='contact' element{<Contact />}>
-        <Route path='user/:userid' element{<User />}></Route>
+    <Route path='' element{<Home />}/>
+      <Route path='about' element{<About />}/>
+        <Route path='contact' element{<Contact />}/>
+        <Route path='user/:userid' element{<User />}/>
         <Route
-        loader= {() => {
+        loader= {githubInfoLoader}
          path='github' 
          element={<Github />} 
-
          />
       </Route>
   )
